@@ -1,0 +1,23 @@
+{
+  "total": 5,
+  "exact_match": 0,
+  "parse_fail": 0,
+  "wrong_shape": 3,
+  "wrong_values": 2,
+  "total_cell_correct": 926,
+  "total_cells": 1632,
+  "errors": [
+    {
+      "id": "009d5c81",
+      "type": "wrong_shape"
+    },
+    {
+      "id": "00dbd492",
+      "type": "wrong_shape"
+    },
+    {
+      "id": "05a7bcf2",
+      "type": "wrong_shape"
+    }
+  ]
+}

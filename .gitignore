@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.py[cod]
+.pytest_cache/
+*.db
+*.pt
+*.log
+arc_cache/
+.venv/
+.agent/
+archive/
+assets/

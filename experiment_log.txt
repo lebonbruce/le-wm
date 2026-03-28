@@ -1,0 +1,137 @@
+============================================================
+  三位一体认知架构 v5.6 (审计全修复 | SIGReg batch | Adam 隔离)
+  参数组分离 | query对齐 | softmax pooling | 配置净空
+============================================================
+Loading Base LLM (Qwen/Qwen2.5-0.5B-Instruct) on cuda...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:01<08:46,  1.82s/it]Loading weights:  71%|███████▏  | 207/290 [00:01<00:00, 147.60it/s]Loading weights: 100%|██████████| 290/290 [00:02<00:00, 122.16it/s]
+>> [外科手术]: 第 14 层 KV-Cache 脑机接口已植入！
+
+--- 阶段 1: 记忆建库 (自动建边) ---
+  >> 记忆写入: 今天和老板开会，他否定了我做了一周的方案。... → 节点 e293c62f
+  >> 记忆写入: 每次努力不被认可时，我都会感到极度焦虑。... → 节点 640da8ca
+  >> 记忆写入: 深呼吸，这不是我的错，慢慢来。... → 节点 6641f4e0
+  >> 记忆写入: 上次被否定后，我用番茄工作法把方案拆分成了小目标。... → 节点 d6d1d04d
+  >> 记忆写入: 小目标逐个攻克的过程中，焦虑感明显下降了。... → 节点 d54f56b1
+
+图谱: 5 节点, 14 突触, FAISS:5 向量 (SQLite: hippocampus.db)
+边类型分布: {'心理反馈': 1, '行动经验': 1, '语义相似': 10, '应对策略': 1, '效果验证': 1}
+
+============================================================
+  深度做梦 v5.5 (Batch 化 + 配置净空)
+============================================================
+  >> [海马体]: TransE 巩固将在训练循环中与 JEPA 联合优化。
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+  >> [海马体]: 清理 2 个孤立关系嵌入（防幽灵参数）。
+  >> 记忆合并: 3 对相似记忆合并为抽象概念
+  [周期 1/50] CE: 4.9512 | Pred: 0.3230 | SIGReg(batch): 17.2948 | IntDiv: 0.0069 | KGE: 1.2990 | QueryAlign: 1.0412 | Gamma: 0.693147
+  [周期 2/50] CE: 4.9512 | Pred: 0.6051 | SIGReg(batch): 15.5480 | IntDiv: 0.0047 | KGE: 1.6521 | QueryAlign: 0.7652 | Gamma: 0.693147
+  [周期 3/50] CE: 4.9512 | Pred: 0.6711 | SIGReg(batch): 11.1301 | IntDiv: 0.0041 | KGE: 1.3101 | QueryAlign: 0.6739 | Gamma: 0.693147
+  [周期 4/50] CE: 4.9512 | Pred: 0.8726 | SIGReg(batch): 9.0772 | IntDiv: 0.0042 | KGE: 1.3532 | QueryAlign: 0.6418 | Gamma: 0.693147
+  [周期 5/50] CE: 4.9512 | Pred: 0.7677 | SIGReg(batch): 8.6695 | IntDiv: 0.0042 | KGE: 1.3532 | QueryAlign: 0.6020 | Gamma: 0.693147
+  [周期 6/50] CE: 4.9512 | Pred: 0.8427 | SIGReg(batch): 6.4668 | IntDiv: 0.0042 | KGE: 1.2990 | QueryAlign: 0.5180 | Gamma: 0.693147
+  [周期 7/50] CE: 4.9512 | Pred: 0.8264 | SIGReg(batch): 8.0289 | IntDiv: 0.0043 | KGE: 1.6633 | QueryAlign: 0.5064 | Gamma: 0.693147
+  [周期 8/50] CE: 4.9512 | Pred: 1.3148 | SIGReg(batch): 9.5131 | IntDiv: 0.0044 | KGE: 1.3101 | QueryAlign: 1.1596 | Gamma: 0.693147
+  [周期 9/50] CE: 4.9512 | Pred: 0.7236 | SIGReg(batch): 15.8149 | IntDiv: 0.0045 | KGE: 1.3532 | QueryAlign: 0.5146 | Gamma: 0.693147
+  [周期 10/50] CE: 4.9512 | Pred: 0.5906 | SIGReg(batch): 7.6025 | IntDiv: 0.0045 | KGE: 1.6521 | QueryAlign: 0.5058 | Gamma: 0.693147
+  [周期 11/50] CE: 4.9512 | Pred: 0.5054 | SIGReg(batch): 7.9526 | IntDiv: 0.0046 | KGE: 1.2990 | QueryAlign: 0.4882 | Gamma: 0.693147
+  [周期 12/50] CE: 4.9512 | Pred: 0.4163 | SIGReg(batch): 8.7265 | IntDiv: 0.0047 | KGE: 1.9622 | QueryAlign: 0.4672 | Gamma: 0.693147
+  [周期 13/50] CE: 4.9512 | Pred: 0.3531 | SIGReg(batch): 7.2847 | IntDiv: 0.0048 | KGE: 1.3532 | QueryAlign: 1.2290 | Gamma: 0.693147
+  [周期 14/50] CE: 4.9512 | Pred: 0.3135 | SIGReg(batch): 6.7923 | IntDiv: 0.0050 | KGE: 1.3101 | QueryAlign: 1.1946 | Gamma: 0.693147
+  [周期 15/50] CE: 4.9512 | Pred: 0.2909 | SIGReg(batch): 7.7374 | IntDiv: 0.0052 | KGE: 1.6521 | QueryAlign: 1.1598 | Gamma: 0.693147
+  [周期 16/50] CE: 4.9512 | Pred: 0.2828 | SIGReg(batch): 6.4312 | IntDiv: 0.0054 | KGE: 1.6633 | QueryAlign: 1.1337 | Gamma: 0.693147
+  [周期 17/50] CE: 4.9512 | Pred: 0.2815 | SIGReg(batch): 6.2973 | IntDiv: 0.0055 | KGE: 1.3532 | QueryAlign: 1.1341 | Gamma: 0.693147
+  [周期 18/50] CE: 4.9512 | Pred: 0.2772 | SIGReg(batch): 5.8372 | IntDiv: 0.0056 | KGE: 1.6091 | QueryAlign: 0.4235 | Gamma: 0.693147
+  [周期 19/50] CE: 4.9512 | Pred: 0.2599 | SIGReg(batch): 5.4698 | IntDiv: 0.0056 | KGE: 1.3532 | QueryAlign: 0.3999 | Gamma: 0.693147
+  [周期 20/50] CE: 4.9512 | Pred: 0.2321 | SIGReg(batch): 5.7680 | IntDiv: 0.0056 | KGE: 1.9622 | QueryAlign: 0.3634 | Gamma: 0.693147
+  [周期 21/50] CE: 4.9512 | Pred: 0.2174 | SIGReg(batch): 4.9847 | IntDiv: 0.0057 | KGE: 1.3101 | QueryAlign: 0.3244 | Gamma: 0.693147
+  [周期 22/50] CE: 4.9512 | Pred: 0.1897 | SIGReg(batch): 4.7039 | IntDiv: 0.0058 | KGE: 1.6633 | QueryAlign: 0.9595 | Gamma: 0.693147
+  [周期 23/50] CE: 4.9512 | Pred: 0.1642 | SIGReg(batch): 4.7176 | IntDiv: 0.0060 | KGE: 1.6521 | QueryAlign: 0.9410 | Gamma: 0.693147
+  [周期 24/50] CE: 4.9512 | Pred: 0.1552 | SIGReg(batch): 4.6197 | IntDiv: 0.0062 | KGE: 1.3101 | QueryAlign: 0.9161 | Gamma: 0.693147
+  [周期 25/50] CE: 4.9512 | Pred: 0.1444 | SIGReg(batch): 4.7399 | IntDiv: 0.0063 | KGE: 1.2990 | QueryAlign: 0.8809 | Gamma: 0.693147
+  [周期 26/50] CE: 4.9512 | Pred: 0.1264 | SIGReg(batch): 4.1008 | IntDiv: 0.0064 | KGE: 1.0000 | QueryAlign: 0.8334 | Gamma: 0.693147
+  [周期 27/50] CE: 4.9512 | Pred: 0.1235 | SIGReg(batch): 3.6201 | IntDiv: 0.0065 | KGE: 1.0000 | QueryAlign: 0.7838 | Gamma: 0.693147
+  [周期 28/50] CE: 4.9512 | Pred: 0.1240 | SIGReg(batch): 4.1837 | IntDiv: 0.0065 | KGE: 1.0000 | QueryAlign: 0.7302 | Gamma: 0.693147
+  [周期 29/50] CE: 4.9512 | Pred: 0.1103 | SIGReg(batch): 3.9049 | IntDiv: 0.0066 | KGE: 1.2990 | QueryAlign: 0.6833 | Gamma: 0.693147
+  [周期 30/50] CE: 4.9512 | Pred: 0.1087 | SIGReg(batch): 3.6456 | IntDiv: 0.0067 | KGE: 1.9622 | QueryAlign: 0.6431 | Gamma: 0.693147
+  [周期 31/50] CE: 4.9512 | Pred: 0.1070 | SIGReg(batch): 3.5592 | IntDiv: 0.0067 | KGE: 1.6633 | QueryAlign: 0.6055 | Gamma: 0.693147
+  [周期 32/50] CE: 4.9512 | Pred: 0.0956 | SIGReg(batch): 3.6489 | IntDiv: 0.0067 | KGE: 1.2990 | QueryAlign: 0.5732 | Gamma: 0.693147
+  [周期 33/50] CE: 4.9512 | Pred: 0.0939 | SIGReg(batch): 3.4237 | IntDiv: 0.0067 | KGE: 1.6521 | QueryAlign: 0.5422 | Gamma: 0.693147
+  [周期 34/50] CE: 4.9512 | Pred: 0.0896 | SIGReg(batch): 3.2452 | IntDiv: 0.0067 | KGE: 1.0000 | QueryAlign: 0.5151 | Gamma: 0.693147
+  [周期 35/50] CE: 4.9512 | Pred: 0.0824 | SIGReg(batch): 3.1695 | IntDiv: 0.0068 | KGE: 1.9622 | QueryAlign: 0.4774 | Gamma: 0.693147
+  [周期 36/50] CE: 4.9512 | Pred: 0.0834 | SIGReg(batch): 3.3968 | IntDiv: 0.0068 | KGE: 1.9622 | QueryAlign: 0.4396 | Gamma: 0.693147
+  [周期 37/50] CE: 4.9512 | Pred: 0.0802 | SIGReg(batch): 3.1002 | IntDiv: 0.0068 | KGE: 1.2990 | QueryAlign: 0.4047 | Gamma: 0.693147
+  [周期 38/50] CE: 4.9512 | Pred: 0.0763 | SIGReg(batch): 3.2923 | IntDiv: 0.0068 | KGE: 1.6091 | QueryAlign: 0.3856 | Gamma: 0.693147
+  [周期 39/50] CE: 4.9512 | Pred: 0.0753 | SIGReg(batch): 2.8148 | IntDiv: 0.0069 | KGE: 1.6091 | QueryAlign: 0.3653 | Gamma: 0.693147
+  [周期 40/50] CE: 4.9512 | Pred: 0.0722 | SIGReg(batch): 2.9819 | IntDiv: 0.0069 | KGE: 1.0000 | QueryAlign: 0.6275 | Gamma: 0.693147
+  [周期 41/50] CE: 4.9512 | Pred: 0.0710 | SIGReg(batch): 2.8114 | IntDiv: 0.0069 | KGE: 1.6091 | QueryAlign: 0.3545 | Gamma: 0.693147
+  [周期 42/50] CE: 4.9512 | Pred: 0.0689 | SIGReg(batch): 2.6880 | IntDiv: 0.0068 | KGE: 1.6521 | QueryAlign: 0.5073 | Gamma: 0.693147
+  [周期 43/50] CE: 4.9512 | Pred: 0.0683 | SIGReg(batch): 2.8368 | IntDiv: 0.0068 | KGE: 1.6091 | QueryAlign: 0.4255 | Gamma: 0.693147
+  [周期 44/50] CE: 4.9512 | Pred: 0.0667 | SIGReg(batch): 2.7162 | IntDiv: 0.0068 | KGE: 1.3101 | QueryAlign: 0.7292 | Gamma: 0.693147
+  [周期 45/50] CE: 4.9512 | Pred: 0.0661 | SIGReg(batch): 2.7194 | IntDiv: 0.0067 | KGE: 1.6091 | QueryAlign: 0.8508 | Gamma: 0.693147
+  [周期 46/50] CE: 4.9512 | Pred: 0.0653 | SIGReg(batch): 2.7595 | IntDiv: 0.0067 | KGE: 1.6521 | QueryAlign: 0.7645 | Gamma: 0.693147
+  [周期 47/50] CE: 4.9512 | Pred: 0.0645 | SIGReg(batch): 2.6873 | IntDiv: 0.0067 | KGE: 1.3532 | QueryAlign: 0.6088 | Gamma: 0.693147
+  [周期 48/50] CE: 4.9512 | Pred: 0.0642 | SIGReg(batch): 2.6961 | IntDiv: 0.0066 | KGE: 1.6521 | QueryAlign: 0.4607 | Gamma: 0.693147
+  [周期 49/50] CE: 4.9512 | Pred: 0.0633 | SIGReg(batch): 2.6150 | IntDiv: 0.0066 | KGE: 1.3101 | QueryAlign: 0.3410 | Gamma: 0.693147
+  [周期 50/50] CE: 4.9512 | Pred: 0.0618 | SIGReg(batch): 2.5462 | IntDiv: 0.0066 | KGE: 1.9622 | QueryAlign: 0.3376 | Gamma: 0.693147
+  >> 意图进化: intent_bank 已根据经验更新
+  Gamma: 0.693147
+
+--- 阶段 3: 认知交互 (Benchmark 模式) ---
+
+============================================================
+[用户]: 啊啊啊又被退回重写了，我真的要崩溃了！
+============================================================
+
+  >>> 架构效果对比 (Gamma=0.6931):
+  [纯 LLM (冻结)]: 
+ 　　我看着他，心里一阵酸楚。我真想哭，可又忍住了。
+ 　　“你不是说我们是好朋友吗？为什么现在就变了？”
+ 　　“因为……”他有些不好意思，“我……”
+ 　　“那你就先别说了。”我说道。
+ 　　他没有说话，只是默默地站在那里，
+  [JEPA + 海马体]: 
+我之前在使用阿里云的ECS实例的时候，经常遇到一些问题。比如，当我尝试重新设置密码时，或者修改系统时间等，这些操作都会被自动重写，导致我的代码无法正常运行。这让我感到非常困扰，甚至可能影响到我的开发进度。
+为了应对这个问题，我需要快速学习如何解决这些问题，并且确保我的代码不会因为
+
+============================================================
+[用户]: 为什么我总是这么焦虑
+============================================================
+
+  >>> 架构效果对比 (Gamma=0.6931):
+  [纯 LLM (冻结)]: ，怎么才能摆脱这种状态？ 你可能需要寻求专业的帮助来解决你的焦虑问题。如果你感到无法控制自己的情绪或行为，或者它影响了你的日常生活，那么寻求专业帮助可能是必要的。
+
+以下是一些可能有助于缓解焦虑的建议：
+
+1. 寻求支持：和朋友、家人或专业人士分享你的感受。他们可以提供情感支持，并给你一个不同的视角
+  [JEPA + 海马体]: ，现在感觉好多了，但是还是有压力，怎么办？应该怎么办呢？
+
+感到焦虑时，可以尝试将焦虑情绪与具体情境或问题联系起来，以增加其强度并产生效果。这种情况下，我们可以使用“正反馈”理论来帮助我们更好地管理焦虑。
+
+在处理焦虑问题时，以下是一些方法：
+
+1. **平衡心理和身体的反应**
+
+============================================================
+[用户]: 有没有什么具体的办法缓解这种压力
+============================================================
+
+  >>> 架构效果对比 (Gamma=0.6931):
+  [纯 LLM (冻结)]: ？ 1. 做自己喜欢的事情，比如画画、听音乐、看书等。2. 和朋友聊天，分享自己的感受和困扰。3. 进行一些运动，如散步、跑步、瑜伽等。4. 寻求专业心理咨询师的帮助。5. 尝试冥想或深呼吸来放松自己。6. 给自己设定小目标，
+  [JEPA + 海马体]: ？我应该怎么办？
+
+请根据以下条件进行分析：
+1. 你有明确的焦虑和抑郁症状，但没有明显的生理指标（如血液测试）。
+2. 没有其他症状，例如头痛、恶心等。
+3. 能够理解并接受各种情绪，并且愿意尝试不同的方法来应对。
+
+那么，对于这种情况，以下是一些可能有效的缓解
+
+最终图谱: 8 节点, 47 突触, FAISS:8 向量 (SQLite: hippocampus.db)
+JEPA 经验池: 2/64
+
+--- 验证 SQLite 持久化恢复与双引一致性 ---
+  >> [海马体]: 恢复 8 节点, 47 突触 (FAISS 索引就绪)。
+恢复后图谱状态: 8 节点, 47 突触, FAISS:8 向量 (SQLite: hippocampus.db)
